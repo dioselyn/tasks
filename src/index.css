@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+
+:root {
+  --primary-color: #470D77;
+  --secondary-color: #910A5C;
+  --color-1: #FFFFFF;
+  --color-2: #867A75;
+  --color-3: #F96105;
+  --color-4: red;
+  --color-5: #4caf50;
+  --gradient: linear-gradient(var(--primary-color), var(--secondary-color));
+  
+  --lg: 4rem;
+  --md: 2rem;
+  --sm: 1rem;
+  --xs: 0.9rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('../public/img/background.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+h1 {
+  font-size: var(--lg);
+}
+
+h2 {
+  font-size: var(--md);
+}
+
+label {
+  font-size: var(--sm);
+}
+
+input {
+  padding-left: 10px;
+}
+
+input::placeholder{
+  font-size: var(--xs);
+}
+
+.title-primary {
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: var(--color-1);
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 640px) {
+  input::placeholder{
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
 }

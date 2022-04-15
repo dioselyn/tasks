@@ -1,0 +1,22 @@
+.FormCreate-label {
+    width: 100%;
+    font-size: var(--sm);
+    display: inline-block;
+    font-weight: 600;
+}
+
+.FormCreate-input {
+    font-family: 'poppins';
+    width: 85%;
+    display: inline-block;
+    background: rgb(255, 255, 255, 0.5);
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    letter-spacing: 0.8px;
+}
+
+.FormCreate-input:focus {
+    outline-color: var(--secondary-color);
+}

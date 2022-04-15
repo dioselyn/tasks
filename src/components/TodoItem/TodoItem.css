@@ -1,0 +1,64 @@
+.TodoItem {
+    background-color: rgb(255, 255, 255, 0.5);;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    border-radius: 10px;
+    padding: 0;
+  }
+  
+  .TodoItem-p {
+    width: calc(100% - 120px);
+    font-size: var(--sm);
+    line-height: 24px;
+    font-weight: 400;
+  }
+  
+  .TodoItem-p--complete {
+    text-decoration: line-through;
+    color: var(--color-2);
+  }
+  
+  .Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    /* background-color: #CCC; */
+  }
+
+  .MdCheckCircleOutline {
+   fill: var(--secondary-color);
+   cursor: pointer;
+   height: 28px;
+   width: 28px;
+   left: 10px;
+   position: absolute;
+   margin-left: 10px;
+  }
+
+  .MdCheckCircleOutline--active {
+    fill: var(--color-5);
+  }
+
+
+
+  .MdClear {
+    fill: var(--color-2);
+    position: absolute;
+    top: 5px;
+    right: 8px;
+
+  }
+
+  .MdClear:hover {
+    fill: var(--color-4);
+  }
+
+ 

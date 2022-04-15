@@ -1,0 +1,37 @@
+.Container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 120px;
+    height: 85vh;
+    margin-bottom: 15vh;
+    
+  }
+  
+.Container-text-secondary {
+    font-size: 24px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1067px) {
+
+  .Container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    grid-gap: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+  .Container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    grid-gap: 0px;
+  }
+
+}
+
+

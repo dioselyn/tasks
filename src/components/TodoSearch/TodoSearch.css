@@ -1,0 +1,31 @@
+.TodoSearch-input {
+    font-family: 'poppins';
+    width: 97%;
+    display: inline-block;
+    background: rgb(255, 255, 255, 0.5);
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    letter-spacing: 0.8px;
+    box-shadow: -5px 5px 5px -5px var(--color-2);
+   
+}
+
+.TodoSearch-input:focus {
+    outline-color: var(--secondary-color);
+  }
+
+.TodoSearch-wrapper {
+        position: relative;
+    
+}
+
+.TodoSearch-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
