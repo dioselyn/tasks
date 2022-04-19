@@ -1,6 +1,6 @@
 import React from "react";
-import { CreateTodoButton } from "../CreateTodoButton";
-import './FormCreateNewTask.css';
+import { CreateTaskButton } from "./CreateTaskButton";
+import './css/FormCreateNewTask.css';
 
 function FormCreateNewTask() { 
     return (
@@ -9,7 +9,7 @@ function FormCreateNewTask() {
         <label className="FormCreate-label color-primary">Task Name</label>
         <input className="FormCreate-input" placeholder="With organization everything is possible"></input>
         </form>
-        <CreateTodoButton/>
+        <CreateTaskButton/>
         </React.Fragment>
         
     )

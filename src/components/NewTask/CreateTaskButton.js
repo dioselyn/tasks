@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateTodoButton(props) {
+function CreateTaskButton(props) {
   const onComplete = () => {
     alert('ya completaste el todo' + props.text)
   };
@@ -18,4 +18,4 @@ function CreateTodoButton(props) {
     
 }
 
-export { CreateTodoButton };
+export { CreateTaskButton };

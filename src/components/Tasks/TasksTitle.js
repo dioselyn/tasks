@@ -1,10 +1,10 @@
 import React from "react";
-import './TitleTodoList.css';
+import './css/TitleTasks.css';
 
-function TitleTodoList() {  =>
+function TasksTitle() {  
     return (
         <h1 className="TitleTodoList title-primary">Your Tasks</h1>
     );
 }
 
-export {TitleTodoList};
+export {TasksTitle};

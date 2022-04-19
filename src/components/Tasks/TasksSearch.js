@@ -1,9 +1,9 @@
 import React from "react";
-import './TodoSearch.css';
 import { FaSearch } from "react-icons/fa";
+import './css/TasksSearch.css';
 
 
-function TodoSearch({ searchValue, setSearchValue }) { 
+function TasksSearch({ searchValue, setSearchValue }) { 
     const onSearchValueChange = (event) => {
         console.log(event.target.value);
         setSearchValue(event.target.value);
@@ -24,4 +24,4 @@ function TodoSearch({ searchValue, setSearchValue }) {
     );
 }
 
-export { TodoSearch };
+export { TasksSearch };

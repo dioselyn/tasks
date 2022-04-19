@@ -1,0 +1,63 @@
+.ContainerNewTask {
+    background: rgb(255,255,255, 0.7);
+    background-image: url("../../../../public/img/background.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 90%;
+    margin-top: 24px;
+    margin-left: 84px;
+    padding-top: 64px;
+    padding-left: 48px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px -5px var(--color-2);
+}
+
+.AddTaskMovil {
+    display: none;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1067px) {
+
+    .ContainerNewTask {
+       display: none;
+    }
+
+    .AddTaskMovil {
+        display: flex;
+        position: absolute;
+        padding: 24px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--color-1);
+        font-size: var(--lg);
+        font-weight: 800;
+        align-self: flex-end;
+        right: 20px;
+        bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .ContainerNewTask {
+       display: none;
+     }
+
+     .AddTaskMovil {
+        display: flex;
+        position: absolute;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--color-1);
+        font-size: var(--lg);
+        font-weight: 800;
+        align-self: flex-end;
+        right: 20px;
+        bottom: 20px;
+    }
+
+}

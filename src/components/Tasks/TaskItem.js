@@ -1,9 +1,9 @@
 import React from 'react';
-import './TodoItem.css';
 import { MdCheckCircleOutline, MdClear } from 'react-icons/md';
+import './css/TaskItem.css';
 
 
-function TodoItem(props) {
+function TaskItem(props) {
  
   return (
     <li className="TodoItem">
@@ -23,4 +23,4 @@ function TodoItem(props) {
   );
 }
 
-export { TodoItem };
+export { TaskItem };

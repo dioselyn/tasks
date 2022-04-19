@@ -1,14 +1,16 @@
 import React from "react";
-import { ContainerNewTask } from "../ContainerNewTask";
-import { ContainerTodoList } from "../ContainerTodoList";
-import './Container.css';
+import { NewTask } from "../NewTask";
+import { Tasks } from "../Tasks";
+import './css/Container.css';
+
 
 
 function Container() {
     return (
         <div className="Container">
-            <ContainerNewTask/>
-            <ContainerTodoList/>
+            <NewTask/>
+            <Tasks useLocalStorage=
+            { useLocalStorage }/>
         </div>
     );
 }

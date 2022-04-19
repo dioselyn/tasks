@@ -19,6 +19,7 @@
     grid-template-columns: 1fr;
     height: 100vh;
     grid-gap: 0px;
+    margin-bottom: 0;
   }
 
 }
@@ -30,6 +31,7 @@
     grid-template-columns: 1fr;
     height: 100vh;
     grid-gap: 0px;
+    margin-bottom: 0;
   }
 
 }
