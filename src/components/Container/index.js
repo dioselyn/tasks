@@ -9,8 +9,7 @@ function Container() {
     return (
         <div className="Container">
             <NewTask/>
-            <Tasks useLocalStorage=
-            { useLocalStorage }/>
+            <Tasks/>
         </div>
     );
 }

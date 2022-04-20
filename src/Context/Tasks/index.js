@@ -46,7 +46,6 @@ function TasksProvider(props) {
 
     return (
         <TasksContext.Provider value={{
-            
             loading,
             error,
             tasks,
@@ -55,11 +54,13 @@ function TasksProvider(props) {
             deleteTask,
             searchValue,
             setSearchValue,
-            total ,
-            completed ,
+            searchedTasks,
+            totalTasks,
+            completedTasks,
         }}>
             { props.children }
         </TasksContext.Provider>
     );
 }
 
+export { TasksContext, TasksProvider };

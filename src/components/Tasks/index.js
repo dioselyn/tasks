@@ -23,12 +23,8 @@ function Tasks({useLocalStorage}) {
         <React.Fragment>
         <div className="ContainerTodoList">
         <TasksTitle/>
-        <TasksCounter
-            
-        />
-        <TasksSearch
-           
-        />
+        <TasksCounter/>
+        <TasksSearch/>
         <TasksList />
         </div>
         </React.Fragment>
