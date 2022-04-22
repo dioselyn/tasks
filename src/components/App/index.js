@@ -1,5 +1,5 @@
 import React from "react";
-import { TasksProvider } from "../../Context/Tasks";
+import { TasksProvider } from "../../context/Tasks";
 import { Container } from '../Container';
 import './App.css';
 

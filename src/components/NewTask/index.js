@@ -3,6 +3,7 @@ import { FormCreateNewTask } from "./FormCreateNewTask";
 import { TitleNewTask } from "./TitleNewTask";
 import { MdAdd } from 'react-icons/md';
 import './css/NewTask.css';
+import { CreateTaskButtonMobile } from "./CreateTaskButtonMobile";
 
 
 function NewTask() {
@@ -12,7 +13,6 @@ function NewTask() {
         <TitleNewTask/>
         <FormCreateNewTask/>
         </div>
-        <button className="AddTaskMovil"><MdAdd/></button>
         </React.Fragment>
     );
 }

@@ -46,17 +46,21 @@ input {
 
 input::placeholder{
   font-size: var(--xs);
+  padding: 5px;
 }
 
 .title-primary {
   font-weight: 900;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .color-primary {
   color: var(--primary-color);
+}
+
+.color-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .bg-primary {
@@ -70,6 +74,10 @@ input::placeholder{
   border: none;
   color: var(--color-1);
   letter-spacing: 2px;
+}
+
+.center {
+  text-align: center;
 }
 
 @media only screen and (max-width: 640px) {

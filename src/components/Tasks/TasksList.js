@@ -1,7 +1,7 @@
 import React from "react";
 import { TaskItem } from "./TaskItem";
 import './css/TasksList.css';
-import { TasksContext } from '../../Context/Tasks/';
+import { TasksContext } from '../../context/Tasks/';
 
 
 
@@ -18,9 +18,9 @@ function TasksList() {
 
             <section>
          {error && <p>Oh no! There is an error...</p>}
-        {loading && <p>loading...</p>}
+        {loading && <p className="color-gradient center">loading...</p>}
 
-        {(!loading && !searchedTasks.length) && <p>Create your first Task!</p>}
+        {(!loading && !searchedTasks.length) && <p className="color-gradient center">Create your first Task!</p>}
 
         <ul className="TodoList">
         {searchedTasks.map(task => (

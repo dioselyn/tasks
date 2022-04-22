@@ -11,9 +11,8 @@ function TasksProvider(props) {
         error,
      } = useLocalStorage('TASKS_V1', []);
  
-    //console.log(tasks);
- 
     const [searchValue, setSearchValue] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(false);
  
      const completedTasks = tasks.filter(task => !!task.completed).length;
      const totalTasks = tasks.length;
@@ -57,6 +56,8 @@ function TasksProvider(props) {
             searchedTasks,
             totalTasks,
             completedTasks,
+            openModal,
+            setOpenModal,
         }}>
             { props.children }
         </TasksContext.Provider>

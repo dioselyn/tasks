@@ -1,25 +1,10 @@
-.ContainerNewTask {
-    background: rgb(255,255,255, 0.7);
-    background-image: url("../../../../public/img/background.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 90%;
-    margin-top: 24px;
-    margin-left: 84px;
-    padding-top: 64px;
-    padding-left: 48px;
-    padding-right: 48px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 15px -5px var(--color-2);
+.AddTaskMobile {
+    display: none;
 }
-
 
 
 @media only screen and (min-width: 641px) and (max-width: 1067px) {
 
-    .ContainerNewTask {
-       display: none;
-    }
 
     .AddTaskMobile{
         display: flex;
@@ -35,15 +20,18 @@
         right: 20px;
         bottom: 20px;
         z-index: 999;
+        transform: rotate(0);
+        transition: .3s ease;
+    }
+
+    .AddTaskMobile:hover{
+        transform: rotate(224deg);
     }
 
 }
 
 @media only screen and (max-width: 640px) {
 
-    .ContainerNewTask {
-       display: none;
-     }
 
      .AddTaskMobile {
         display: flex;
