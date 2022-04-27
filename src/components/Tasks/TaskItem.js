@@ -5,19 +5,24 @@ import './css/TaskItem.css';
 
 function TaskItem(props) {
   const [isShown, setIsShown] = React.useState(false);
-  //const [task, setTask] = React.useState(props.text);
+  const [task, setTask] = React.useState(props.text);
   const [disable, setDisable] = React.useState(true);
   /*const {
     editTask,
 } = React.useContext(TasksContext); */
 
 
-  /*const onBlur = (event) => {
-    //event.preventDefault();
-    setTask(event.target.value);
+  const onBlur = (event) => {
+     event.preventDefault();
+     setTask(event.target.value);
    // addTask(setTask);
-   // setDisable(true);
- } */
+     setDisable(true);
+  }
+
+  const Edit = () => {
+    (disable && setDisable(false));
+    setTask();
+  }
 
   
  
@@ -30,8 +35,9 @@ function TaskItem(props) {
         />
         <input 
           className={`TaskItem-input ${props.completed && 'TaskItem-input--complete'}`} 
-          value={props.text} 
+          value={task} 
           readOnly={disable}
+          onBlur={onBlur}
         />
 
         <MdClear 
@@ -42,7 +48,7 @@ function TaskItem(props) {
         <MdEdit
           id="edit"
           className="MdEdit"
-          onClick={() => disable && setDisable(false)}
+          onClick={Edit}
         />
       )}
     </li>
