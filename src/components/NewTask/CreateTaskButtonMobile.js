@@ -3,8 +3,8 @@ import { MdAdd } from 'react-icons/md';
 import './css/CreateTaskButton.css'
 
 function CreateTaskButtonMobile(props) {
-    const onClickButton = (msg) => {
-        props.setOpenModal(true);
+    const onClickButton = () => {
+        props.setOpenModal(prevState => !prevState);
     }
 
     return (

@@ -1,5 +1,6 @@
 .ContainerTodoList {
-    margin-right: 84px;
+    margin-right: 64px;
+    margin-bottom: 12px;
     justify-self: center;
 }
 
@@ -7,6 +8,7 @@
 
     .ContainerTodoList {
         margin:0;
+        width: 400px;
     }
 
 }
@@ -17,5 +19,6 @@
 @media only screen and (max-width: 640px) {
     .ContainerTodoList {
         margin:0;
+        width: 300px;
     }
 }

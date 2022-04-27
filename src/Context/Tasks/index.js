@@ -6,7 +6,7 @@ const TasksContext = React.createContext();
 function TasksProvider(props) {
     const {
         item: tasks,
-        saveItem: saveTasks ,
+        saveItem: saveTask,
         loading,
         error,
      } = useLocalStorage('TASKS_V1', []);
@@ -22,39 +22,58 @@ function TasksProvider(props) {
  
      if (!searchValue.length >= 1 ) { //  if searchValue is empty
          searchedTasks = tasks;
-     } else {} //Filter Tasks
+     } else { //Filter Tasks
          searchedTasks =  tasks.filter(task => {
              const taskText = task.text.toLowerCase();
              const searchText  = searchValue.toLowerCase();
              return taskText.includes(searchText);
-     });
+     })
+    }
+    
+     const addTask = (text) => { 
+        const newTasks = [...tasks];
+        newTasks.push({
+            completed: false,
+            text,
+        }); 
+        saveTask(newTasks);
+    };
+
+
+
+    /*const editTask = (text) => {
+
+    } */
+
  
      const completeTask = (text) => { //complete Task
          const taskIndex = tasks.findIndex(task => task.text === text);
          const newTasks = [...tasks];
          newTasks[taskIndex].completed = true;
-         saveTasks(newTasks);
+         saveTask(newTasks);
      };
  
      const deleteTask = (text) => { //delete Task
          const taskIndex = tasks.findIndex(task => task.text === text);
          const newTasks = [...tasks];
          newTasks.splice(taskIndex, 1);
-         saveTasks(newTasks);
+         saveTask(newTasks);
      };
+    
 
     return (
         <TasksContext.Provider value={{
             loading,
             error,
             tasks,
-            saveTasks,
+            totalTasks,
+            saveTask,
             completeTask,
             deleteTask,
             searchValue,
             setSearchValue,
             searchedTasks,
-            totalTasks,
+            addTask,
             completedTasks,
             openModal,
             setOpenModal,
@@ -62,6 +81,8 @@ function TasksProvider(props) {
             { props.children }
         </TasksContext.Provider>
     );
+
+
 }
 
 export { TasksContext, TasksProvider };

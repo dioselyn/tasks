@@ -8,7 +8,7 @@
 
     .AddTaskMobile{
         display: flex;
-        position: absolute;
+        position: fixed;
         padding: 24px;
         border-radius: 50%;
         border: none;
@@ -19,24 +19,26 @@
         align-self: flex-end;
         right: 20px;
         bottom: 20px;
-        z-index: 999;
+        z-index: 1;
         transform: rotate(0);
         transition: .3s ease;
+        cursor: pointer;
     }
 
-    .AddTaskMobile:hover{
+    .AddTaskMobile:hover {
         transform: rotate(224deg);
     }
+
 
 }
 
 @media only screen and (max-width: 640px) {
 
 
-     .AddTaskMobile {
+    .AddTaskMobile {
         display: flex;
-        position: absolute;
-        padding: 10px;
+        position: fixed;
+        padding: 24px;
         border-radius: 50%;
         border: none;
         background-color: var(--primary-color);
@@ -46,7 +48,15 @@
         align-self: flex-end;
         right: 20px;
         bottom: 20px;
-        z-index: 999;
+        z-index: 1;
+        transform: rotate(0);
+        transition: .3s ease;
+        cursor: pointer;
     }
+
+    .AddTaskMobile:hover {
+        transform: rotate(224deg);
+    }
+
 
 }

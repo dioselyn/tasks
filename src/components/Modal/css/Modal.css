@@ -1,5 +1,5 @@
 .ModalBackground {
-    background: rgba(244, 247, 252, 0.8);
+    background: rgba(14, 14, 14, 0.4);
     position: fixed;
     top: -10px;
     left: -10px;
@@ -8,10 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
   }
 
-  .Modal{
+  .Modal {
     display: none ;
   }
 
@@ -29,20 +28,31 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 300px;
+    background: rgb(255,255,255,0.9);
+    padding: 64px;
+    border-radius: 20px;
    }
-  .FormCreate-input {
-   box-sizing: content-box;
-   padding-left: 0;
-  }
-
-   .CreateTodoButton {
-     width: 100%;
-   }
+  
   }
 
 
 
 
 @media only screen and (max-width: 640px) {
-   
+  .Modal {
+    width: 80%;
+    height: 100vh; /*full screen*/
+    display: grid;
+    place-items: center;
+   }
+
+   .ModalContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+    width:200px;
+    background: rgb(255,255,255,0.9);
+    padding: 28px;
+    border-radius: 20px;
+   }
+  
 }

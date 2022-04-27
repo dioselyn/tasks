@@ -1,11 +1,18 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import './css/TasksSearch.css';
+import { TasksContext } from '../../context/Tasks';
 
 
-function TasksSearch({ searchValue, setSearchValue }) { 
+function TasksSearch() { 
+
+    const {
+        searchValue,
+        setSearchValue,
+    } = React.useContext(TasksContext);
+
+
     const onSearchValueChange = (event) => {
-        console.log(event.target.value);
         setSearchValue(event.target.value);
     };
 

@@ -4,10 +4,13 @@
   --primary-color: #470D77;
   --secondary-color: #910A5C;
   --color-1: #FFFFFF;
-  --color-2: #867A75;
+  --color-2: #605e5d;
   --color-3: #F96105;
   --color-4: red;
   --color-5: #4caf50;
+  --color-6: rgb(202, 198, 203);
+  --color-7: #DE429B;
+  --color-8: #FBA855;
   --gradient: linear-gradient(var(--primary-color), var(--secondary-color));
   
   --xl: 4rem;
@@ -15,6 +18,7 @@
   --md: 2rem;
   --sm: 1rem;
   --xs: 0.9rem;
+  --xxs: 0.7rem;
 }
 
 body {
@@ -33,6 +37,7 @@ h1 {
 }
 
 h2 {
+  margin: 0;
   font-size: var(--md);
 }
 
@@ -42,12 +47,17 @@ label {
 
 input {
   padding-left: 10px;
+  font-size: var(--xs);
 }
 
-input::placeholder{
+
+textarea {
+  padding: 14px 10px 0;
+  overflow-y:auto;
   font-size: var(--xs);
-  padding: 5px;
+  vertical-align: middle;
 }
+
 
 .title-primary {
   font-weight: 900;
@@ -63,6 +73,10 @@ input::placeholder{
   color: transparent;
 }
 
+.color-danger {
+  color: var(--color-4);
+}
+
 .bg-primary {
   background-color: var(--primary-color);
 }
@@ -76,16 +90,51 @@ input::placeholder{
   letter-spacing: 2px;
 }
 
+.button-secondary {
+  background-color: var(--color-6);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: var(--color-2);
+  letter-spacing: 2px;
+}
+
 .center {
   text-align: center;
 }
 
-@media only screen and (max-width: 640px) {
-  input::placeholder{
-    font-size: 0.7rem;
-  }
+@media only screen and (max-width: 1067px) {
 
   h1 {
-    font-size: 3rem;
+    font-size: var(--lg);
   }
+
+  h2 {
+    font-size: var(--sm);
+  }
+
+  textarea {
+    padding: 5px 10px 0;
+    font-size: var(--xxs);
+  }
+
+
+  .button-primary {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    color: var(--color-1);
+    letter-spacing: 2px;
+  }
+  
+  .button-secondary {
+    background-color: var(--color-6);
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    color: var(--color-2);
+    letter-spacing: 2px;
+  }
+  
 }

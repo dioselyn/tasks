@@ -1,5 +1,5 @@
 .ContainerNewTask {
-    background: rgb(255,255,255, 0.7);
+    background: rgb(255,255,255,0.8);
     background-image: url("../../../../public/img/background.png");
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -24,17 +24,17 @@
     .AddTaskMobile{
         display: flex;
         position: absolute;
-        padding: 24px;
+        padding: 20px;
         border-radius: 50%;
         border: none;
         background-color: var(--primary-color);
         color: var(--color-1);
-        font-size: var(--lg);
+        font-size: var(--md);
         font-weight: 800;
         align-self: flex-end;
         right: 20px;
         bottom: 20px;
-        z-index: 999;
+        z-index: 1;
     }
 
 }
@@ -48,17 +48,17 @@
      .AddTaskMobile {
         display: flex;
         position: absolute;
-        padding: 10px;
+        padding: 8px;
         border-radius: 50%;
         border: none;
         background-color: var(--primary-color);
         color: var(--color-1);
-        font-size: var(--lg);
+        font-size: var(--sm);
         font-weight: 800;
         align-self: flex-end;
         right: 20px;
         bottom: 20px;
-        z-index: 999;
+        z-index: 1;
     }
 
 }

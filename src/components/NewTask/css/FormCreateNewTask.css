@@ -3,9 +3,10 @@
     font-size: var(--sm);
     display: inline-block;
     font-weight: 600;
+    margin-top: 12px;
 }
 
-.FormCreate-input {
+.FormCreate-textarea {
     font-family: 'poppins';
     width: 100%;
     display: inline-block;
@@ -14,14 +15,40 @@
     border-radius: 10px;
     border: none;
     margin: 10px 0;
-    letter-spacing: 0.8px;
+    box-shadow: -2px 1px 10px 1px var(--color-6);
 }
 
-.FormCreate-input:focus {
+.FormCreate-textarea:focus {
     outline-color: var(--secondary-color);
+}
+
+.Content-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1067px) {
 
+    .Content-buttons {
+      justify-content: space-around;
+      width: 100%;
+    }
+}
 
+@media only screen and (max-width: 640px) {
+
+    .Content-buttons {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .FormCreate-label {
+        width: 100%;
+        font-size: var(--xs);
+        display: inline-block;
+        font-weight: 600;
+        margin-top: 12px;
+    }
+    
 }
