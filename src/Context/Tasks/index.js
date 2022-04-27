@@ -39,11 +39,12 @@ function TasksProvider(props) {
         saveTask(newTasks);
     };
 
-
-
-    /*const editTask = (text) => {
-
-    } */
+    const editTask = (text, newText) => {
+        const taskIndex = tasks.findIndex(task => task.text === text);
+         const newTasks = [...tasks];
+         newTasks[taskIndex].text = newText;
+         saveTask(newTasks);
+    };
 
  
      const completeTask = (text) => { //complete Task
@@ -68,6 +69,7 @@ function TasksProvider(props) {
             tasks,
             totalTasks,
             saveTask,
+            editTask,
             completeTask,
             deleteTask,
             searchValue,

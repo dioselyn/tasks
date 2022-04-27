@@ -1,27 +1,30 @@
 import React from 'react';
 import { MdCheckCircleOutline, MdClear, MdEdit } from 'react-icons/md';
-//import { TasksContext } from '../../context';
+import { TasksContext } from '../../context/Tasks';
 import './css/TaskItem.css';
 
 function TaskItem(props) {
   const [isShown, setIsShown] = React.useState(false);
   const [task, setTask] = React.useState(props.text);
   const [disable, setDisable] = React.useState(true);
-  /*const {
+
+  const {
     editTask,
-} = React.useContext(TasksContext); */
+} = React.useContext(TasksContext); 
+
+  const onChange = (event) => {
+    setTask(event.target.value);
+  }
 
 
-  const onBlur = (event) => {
-     event.preventDefault();
-     setTask(event.target.value);
-   // addTask(setTask);
+  const onBlur = () => {
+     editTask(props.text, task);
      setDisable(true);
   }
 
   const Edit = () => {
     (disable && setDisable(false));
-    setTask();
+    // setTask("");
   }
 
   
@@ -38,13 +41,14 @@ function TaskItem(props) {
           value={task} 
           readOnly={disable}
           onBlur={onBlur}
+          onChange={onChange}
         />
 
         <MdClear 
         className="MdClear"
         onClick={props.onDelete}
         />
-      {isShown && (
+      {(isShown && !props.completed) && (
         <MdEdit
           id="edit"
           className="MdEdit"
