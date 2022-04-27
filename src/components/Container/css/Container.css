@@ -2,9 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-gap: 120px;
-    height: 85vh;
-    margin-bottom: 15vh;
-    
+    height: calc(100vh - 60px);
+    margin: 0;
   }
   
 .Container-text-secondary {
@@ -17,9 +16,8 @@
   .Container {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
     grid-gap: 0px;
-    margin-bottom: 0;
+    height: calc(100vh - 10px);
   }
 
 }
@@ -29,9 +27,7 @@
   .Container {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
-    grid-gap: 0px;
-    margin-bottom: 0;
+    height: calc(100vh - 50px);
   }
 
 }

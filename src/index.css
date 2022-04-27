@@ -20,6 +20,11 @@
   --xs: 0.9rem;
   --xxs: 0.7rem;
 }
+
+html {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -33,6 +38,10 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+}
+
+footer {
+  margin: 0;
 }
 
 h1 {
