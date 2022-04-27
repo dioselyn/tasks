@@ -1,3 +1,28 @@
+# TASKS
+ Application of Tasks Manager
+
+Getting Started 🚀
+These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes.
+
+See Deployment to learn how to deploy the project.
+
+Pre-requirements 📋
+  - Node
+  - Local Server
+  - Browser
+
+
+Author ✒️
+Dioselyn Colina
+
+
+License📄
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Thanks to God 🎁
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
