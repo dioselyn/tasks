@@ -20,6 +20,9 @@
   --xs: 0.9rem;
   --xxs: 0.7rem;
 }
+a {
+  text-decoration: none;
+}
 
 body {
   margin: 0;
@@ -41,13 +44,13 @@ h2 {
   font-size: var(--md);
 }
 
-label {
-  font-size: var(--sm);
-}
-
 input {
   padding-left: 10px;
   font-size: var(--xs);
+}
+
+label {
+  font-size: var(--sm);
 }
 
 
