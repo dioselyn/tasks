@@ -9,7 +9,7 @@
     .AddTaskMobile{
         display: flex;
         position: fixed;
-        padding: 24px;
+        padding: 16px;
         border-radius: 50%;
         border: none;
         background-color: var(--primary-color);
@@ -38,13 +38,13 @@
     .AddTaskMobile {
         display: flex;
         position: fixed;
-        padding: 24px;
+        padding: 14px;
         border-radius: 50%;
         border: none;
         background-color: var(--primary-color);
         color: var(--color-1);
-        font-size: var(--lg);
-        font-weight: 800;
+        font-size: var(--md);
+        font-weight: 600;
         align-self: flex-end;
         right: 20px;
         bottom: 20px;
