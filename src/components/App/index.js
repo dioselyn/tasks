@@ -77,7 +77,10 @@ function App() {
         </Tasks>
 
         {!!openModal && ( //IF IS TRUE
-          <Modal />
+          <Modal>
+            <TitleNewTask />
+            <FormCreateNewTask addTask={addTask} setOpenModal={setOpenModal} />
+          </Modal>
         )}
         <CreateTaskButtonMobile setOpenModal={setOpenModal} />
       </Container>

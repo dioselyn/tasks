@@ -4,14 +4,11 @@ import { FormCreateNewTask } from "../NewTask/FormCreateNewTask";
 import { TitleNewTask } from "../NewTask/TitleNewTask";
 import "./css/Modal.css";
 
-function Modal() {
+function Modal({ children }) {
   return ReactDOM.createPortal(
     <div className="Modal">
       <div className="ModalBackground">
-        <div className="ModalContainer">
-          <TitleNewTask />
-          <FormCreateNewTask />
-        </div>
+        <div className="ModalContainer">{children}</div>
       </div>
     </div>,
     document.getElementById("modal")
