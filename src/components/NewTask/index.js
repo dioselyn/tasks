@@ -5,12 +5,11 @@ import './css/NewTask.css';
 
 
 
-function NewTask() {
+function NewTask({children}) {
     return (
         <React.Fragment>
         <div className="ContainerNewTask">
-        <TitleNewTask/>
-        <FormCreateNewTask/>
+            {children}
         </div>
         </React.Fragment>
     );

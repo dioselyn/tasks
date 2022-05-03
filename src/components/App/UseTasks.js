@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-function UseTasks(props) {
+function useTasks(props) {
   const {
     item: tasks,
     saveItem: saveTask,
@@ -81,4 +81,4 @@ function UseTasks(props) {
   };
 }
 
-export { UseTasks };
+export { useTasks };

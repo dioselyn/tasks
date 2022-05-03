@@ -3,14 +3,16 @@
     background-image: url("../../../../public/img/background.png");
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 90%;
-    margin-top: 24px;
+    background-size: 50%;
+    margin-top: 78px;
     margin-left: 84px;
     padding-top: 64px;
     padding-left: 48px;
     padding-right: 48px;
     border-radius: 20px;
     box-shadow: 10px 10px 15px -5px var(--color-2);
+    box-sizing: content-box;
+    height: 400px;
 }
 
 

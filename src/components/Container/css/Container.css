@@ -1,9 +1,8 @@
 .Container {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    grid-gap: 120px;
-    height: calc(100vh - 60px);
-    margin: 0;
+    grid-gap: 20px;
+    padding-bottom: 10%;
   }
   
 .Container-text-secondary {

@@ -21,14 +21,6 @@
   --xxs: 0.7rem;
 }
 
-html {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -40,9 +32,10 @@ body {
   background-size: cover;
 }
 
-footer {
-  margin: 0;
+a {
+  text-decoration: none;
 }
+
 
 h1 {
   font-size: var(--xl);
