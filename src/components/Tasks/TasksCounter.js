@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/TasksCounter.css";
 
-function TasksCounter({ completedTasks, totalTasks }) {
+function TasksCounter({ completedTasks, totalTasks, loading }) {
   return (
-    <p className="TodoCounter color-primary">
+    <p className={`TodoCounter color-primary ${!!loading && "loading"}`}>
       You have completed {completedTasks} of {totalTasks} Tasks
     </p>
   );

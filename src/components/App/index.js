@@ -46,7 +46,7 @@ function App() {
           <FormCreateNewTask addTask={addTask} setOpenModal={setOpenModal} />
         </NewTask>
 
-        <Tasks>
+        <Tasks loading={loading}>
           <TasksTitle />
           <TasksCounter
             completedTasks={completedTasks}
@@ -58,7 +58,6 @@ function App() {
           />
           <TasksList
             error={error}
-            loading={loading}
             searchText={searchValue}
             searchedTasks={searchedTasks}
             totalTasks={totalTasks}

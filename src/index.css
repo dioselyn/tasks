@@ -108,6 +108,10 @@ textarea {
   text-align: center;
 }
 
+.loading {
+  opacity: 20%;
+}
+
 @media only screen and (max-width: 1067px) {
 
   h1 {

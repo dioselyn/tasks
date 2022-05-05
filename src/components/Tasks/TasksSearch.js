@@ -2,7 +2,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import "./css/TasksSearch.css";
 
-function TasksSearch({ searchValue, setSearchValue }) {
+function TasksSearch({ searchValue, setSearchValue, loading }) {
   const onSearchValueChange = (event) => {
     setSearchValue(event.target.value);
   };
@@ -11,13 +11,15 @@ function TasksSearch({ searchValue, setSearchValue }) {
     <div className="TodoSearch-wrapper">
       <input
         ype="search"
-        className="TodoSearch-input"
+        className={`TodoSearch-input ${!!loading && "loading"}`}
         placeholder="Search..."
         value={searchValue}
         onChange={onSearchValueChange}
       />
 
-      <FaSearch className="TodoSearch-icon color-primary" />
+      <FaSearch
+        className={`TodoSearch-icon color-primary ${!!loading && "loading"}`}
+      />
     </div>
   );
 }
