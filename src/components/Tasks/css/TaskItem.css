@@ -11,7 +11,7 @@
   }
   
   .TaskItem-input {
-    width: calc(100% - 120px);
+    width: auto;
     font-size: var(--sm);
     font-weight: 400;
     background: transparent;

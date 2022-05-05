@@ -55,25 +55,23 @@ function App() {
             searchValue={searchValue}
             setSearchValue={setSearchValue}
           />
-          <TasksList>
-            {error && <TasksError error={error} />}
-            {loading && <TasksLoading />}
-
-            {!loading && !searchedTasks.length && <EmptyTasks />}
-
-            <ul className="TodoList">
-              {searchedTasks.map((task) => (
-                <TaskItem
-                  editTask={editTask}
-                  key={task.text}
-                  text={task.text}
-                  completed={task.completed}
-                  onComplete={() => completeTask(task.text)}
-                  onDelete={() => deleteTask(task.text)}
-                />
-              ))}
-            </ul>
-          </TasksList>
+          <TasksList
+            error={error}
+            loading={loading}
+            searchedTasks={searchedTasks}
+            onError={() => <TasksError />}
+            onLoading={() => <TasksLoading />}
+            render={(task) => (
+              <TaskItem
+                editTask={editTask}
+                key={task.text}
+                text={task.text}
+                completed={task.completed}
+                onComplete={() => completeTask(task.text)}
+                onDelete={() => deleteTask(task.text)}
+              />
+            )}
+          />
         </Tasks>
 
         {!!openModal && ( //IF IS TRUE
