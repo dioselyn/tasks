@@ -15,6 +15,7 @@ import { TaskItem } from "../Tasks/TaskItem";
 import { TasksError } from "../TasksError";
 import { TasksLoading } from "../TaskLoading";
 import { EmptyTasks } from "../EmptyTasks";
+import { EmptySearchResults } from "../EmptySearchResults";
 import { Footer } from "../Footer";
 import "./App.css";
 
@@ -58,9 +59,15 @@ function App() {
           <TasksList
             error={error}
             loading={loading}
+            searchText={searchValue}
             searchedTasks={searchedTasks}
+            totalTasks={totalTasks}
             onError={() => <TasksError />}
             onLoading={() => <TasksLoading />}
+            onEmptyTasks={() => <EmptyTasks />}
+            onEmptySearchResults={(searchText) => (
+              <EmptySearchResults searchText={searchText} />
+            )}
             render={(task) => (
               <TaskItem
                 editTask={editTask}
