@@ -17,6 +17,7 @@ import { TasksLoading } from "../TaskLoading";
 import { EmptyTasks } from "../EmptyTasks";
 import { EmptySearchResults } from "../EmptySearchResults";
 import { Footer } from "../Footer";
+import { ChangeAlertWithStorageListener } from "../ChangeAlert";
 import "./App.css";
 
 function App() {
@@ -89,6 +90,8 @@ function App() {
         <CreateTaskButtonMobile setOpenModal={setOpenModal} />
       </Container>
       <Footer />
+
+      <ChangeAlertWithStorageListener />
     </React.Fragment>
   );
 }
