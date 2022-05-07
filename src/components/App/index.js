@@ -17,7 +17,7 @@ import { TasksLoading } from "../TaskLoading";
 import { EmptyTasks } from "../EmptyTasks";
 import { EmptySearchResults } from "../EmptySearchResults";
 import { Footer } from "../Footer";
-import { ChangeAlertWithStorageListener } from "../ChangeAlert/";
+import { ChangeAlert } from "../ChangeAlert/";
 import "./App.css";
 
 function App() {
@@ -92,7 +92,7 @@ function App() {
       </Container>
       <Footer />
 
-      <ChangeAlertWithStorageListener syncronize={syncronizeTasks} />
+      <ChangeAlert syncronize={syncronizeTasks} />
     </React.Fragment>
   );
 }
