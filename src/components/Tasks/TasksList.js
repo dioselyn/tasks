@@ -16,7 +16,7 @@ function TasksList(props) {
         !props.searchedTasks.length &&
         props.onEmptySearchResults(props.searchText)}
 
-      {props.searchedTasks.map(renderFunc)}
+      {!props.loading && !props.error && props.searchedTasks.map(renderFunc)}
 
       <ul className="TodoList">{props.children}</ul>
     </section>

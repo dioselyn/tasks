@@ -5,9 +5,25 @@ function withStorageListener(WrappedComponent) {
   return function WrappedComponentWithStorageListener(props) {
     //return a component called WrapperComponentWithStorageListener
     const [storageChange, setStorageChange] = React.useState(false); //state that to save some change inside the app
-    return (
-      <WrappedComponent show={storageChange} toggleShow={setStorageChange} />
-    );
+
+    React.useEffect(() => {
+      const onChange = (change) => {
+        if (change.key === "TASKS_V1") {
+          console.log("there were changes in TASKS_V1");
+
+          setStorageChange(true);
+        }
+      };
+
+      window.addEventListener("storage", onChange);
+    }, [storageChange]);
+
+    const toggleShow = () => {
+      props.syncronize();
+      setStorageChange(false);
+    };
+
+    return <WrappedComponent show={storageChange} toggleShow={toggleShow} />;
   };
 }
 

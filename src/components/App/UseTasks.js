@@ -5,6 +5,7 @@ function useTasks(props) {
   const {
     item: tasks,
     saveItem: saveTask,
+    syncronizeItem: syncronizeTasks,
     loading,
     error,
   } = useLocalStorage("TASKS_V1", []);
@@ -78,6 +79,7 @@ function useTasks(props) {
     completedTasks,
     openModal,
     setOpenModal,
+    syncronizeTasks,
   };
 }
 

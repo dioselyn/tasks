@@ -17,7 +17,7 @@ import { TasksLoading } from "../TaskLoading";
 import { EmptyTasks } from "../EmptyTasks";
 import { EmptySearchResults } from "../EmptySearchResults";
 import { Footer } from "../Footer";
-import { ChangeAlertWithStorageListener } from "../ChangeAlert";
+import { ChangeAlertWithStorageListener } from "../ChangeAlert/";
 import "./App.css";
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
     completedTasks,
     openModal,
     setOpenModal,
+    syncronizeTasks,
   } = useTasks();
 
   return (
@@ -91,7 +92,7 @@ function App() {
       </Container>
       <Footer />
 
-      <ChangeAlertWithStorageListener />
+      <ChangeAlertWithStorageListener syncronize={syncronizeTasks} />
     </React.Fragment>
   );
 }
